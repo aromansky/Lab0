@@ -1,4 +1,8 @@
-function rightRiemannSum(f, a, b, n = 1000) {
+function rightRiemannSum(f, a, b, n = 1000000) {
+  if (a > b) {
+    [a, b] = [b, a]
+  }
+
   const dx = (b - a) / n;
   let sum = 0;
 
